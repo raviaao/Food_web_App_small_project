@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Eats - Gourmet Food Ordering</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="logo">Delicious Eats</h1>
+            <ul class="nav-links">
+                <li><a href="#chicken">Chicken</a></li>
+                <li><a href="#mutton">Mutton</a></li>
+                <li><a href="#fish">Fish</a></li>
+            </ul>
+            <button class="cart-btn" id="open-cart">
+                <i data-lucide="shopping-cart"></i>
+                Cart (<span id="cart-count">0</span>)
+            </button>
+            <a href="/admin-login.html" class="btn">Admin Login</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h2>Savor the Flavor of Gourmet Cuisine</h2>
+            <p>Explore our exquisite menu featuring the finest chicken, mutton, and fish dishes</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="chicken" class="food-section">
+            <h2>Chicken Delights</h2>
+            <div class="food-grid" id="chicken-grid"></div>
+        </section>
+
+        <section id="mutton" class="food-section">
+            <h2>Mutton Specialties</h2>
+            <div class="food-grid" id="mutton-grid"></div>
+        </section>
+
+        <section id="fish" class="food-section">
+            <h2>Seafood Sensations</h2>
+            <div class="food-grid" id="fish-grid"></div>
+        </section>
+    </main>
+
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <h2>Your Gourmet Selection</h2>
+            <table id="cart-items">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="cart-total">
+                <strong>Total: $<span id="cart-total">0.00</span></strong>
+            </div>
+            <div class="cart-actions">
+                <select id="table-select">
+                    <option value="">Select Table</option>
+                    <option value="1">Table 1</option>
+                    <option value="2">Table 2</option>
+                    <option value="3">Table 3</option>
+                    <option value="4">Table 4</option>
+                    <option value="5">Table 5</option>
+                    <option value="6">Table 6</option>
+                    <option value="7">Table 7</option>
+                    <option value="8">Table 8</option>
+                    <option value="9">Table 9</option>
+                    <option value="10">Table 10</option>
+                </select>
+                <button id="place-order" class="btn btn-primary">Place Order</button>
+                <button id="close-cart" class="btn btn-secondary">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Us</h3>
+                    <p>Delicious Eats brings you the finest selection of gourmet dishes. Our commitment to quality and taste is unmatched.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>123 Gourmet Avenue, Culinary City</p>
+                    <p>Phone: (123) 456-7890</p>
+                    <p>Email: taste@deliciouseats.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i data-lucide="facebook"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="instagram"></i></a>
+                        <a href="#" class="social-icon"><i data-lucide="twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Delicious Eats. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
